@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jp.ac.kcg.E19C4019.TableEditController">
+   <center>
+      <TableView fx:id="tv" editable="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="subject" onEditCommit="#editSubject" prefWidth="266.0000365972519" text="題目" />
+          <TableColumn fx:id="deadline" onEditCommit="#editDeadline" prefWidth="215.99993896484375" text="期限" />
+            <TableColumn fx:id="priority" onEditCommit="#editPriority" prefWidth="117.19992065429688" text="優先度" />
+        </columns>
+      </TableView>
+   </center>
+   <top>
+      <TextField fx:id="tf" onAction="#addToDo" BorderPane.alignment="CENTER" />
+   </top>
+</BorderPane>
